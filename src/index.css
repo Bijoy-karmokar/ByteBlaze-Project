@@ -1,5 +1,7 @@
 @import "tailwindcss";
-@plugin "daisyui" {
-  themes: 'light', 'cupcake';
+/* @plugin "daisyui"; */
+
+@plugin "daisyui"{
+   themes: 'light' , 'synthwave';
 }
 
