@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { MdBookmarkAdd } from "react-icons/md";
 import { Link, Outlet, useLoaderData } from "react-router";
 
 const BlogDetails = () => {
@@ -13,6 +14,11 @@ const BlogDetails = () => {
     readable_publish_date,
     
   } = blog || {};
+
+  const handleBookMark=(blog)=>{
+   console.log(blog);
+   
+  }
 
   return (
     <div className="max-w-3xl px-6 py-16 mx-auto space-y-12">
@@ -71,6 +77,10 @@ const BlogDetails = () => {
             </svg>
             <span>Author</span>
           </Link>
+
+          <div onClick={()=>handleBookMark(blog)} className="bg-gray-200 p-3 ml-5 rounded-full text-primary hover:scale-105 cursor-pointer hover:bg-opacity-30 bg-opacity-20">
+            <MdBookmarkAdd className="text-secondary" size={20}></MdBookmarkAdd>
+          </div>
         </div>
         <Outlet></Outlet>
       </article>
