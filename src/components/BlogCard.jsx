@@ -6,13 +6,13 @@ const BlogCard = ({blog}) => {
     const{title,description,published_at,cover_image,id} = blog;
     
     return (
-        <div>
-             <Link to={`/blog/${id}`}
-            className="max-w-sm mx-auto border-2 transition hover:scale-105 border-primary hover:border-secondary group hover:no-underline focus:no-underline"
+        <div className='border-2 transition hover:scale-105 border-primary hover:border-secondary rounded-3xl'>
+            <Link to={`/blog/${id}`}
+            className="max-w-sm mx-auto"
           >
             <img
               role="presentation"
-              className="object-cover w-full rounded h-44 "
+              className="object-cover w-full rounded-3xl h-44 "
               src={cover_image}
             />
             <div className="p-6 space-y-2 text-black">

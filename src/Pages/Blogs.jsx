@@ -5,7 +5,7 @@ import BlogCard from "../components/BlogCard";
 const Blogs = () => {
   
     const blogs = useLoaderData();
-    console.log(blogs);
+    // console.log(blogs);
     
   return (
     <section className=" text-gray-100">
